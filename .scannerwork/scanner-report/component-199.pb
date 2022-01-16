@@ -1,0 +1,1 @@
+Ç 2phpXhradmin/server/errors.php
