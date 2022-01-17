@@ -69,6 +69,7 @@ if(isset($_POST["getProducthome"])){
 	}else{
 		$start = 0;
 	}
+	//TESTTESTTESTTEST
 	$product_query = "SELECT * FROM products,categories WHERE product_cat=cat_id LIMIT $start,$limit";
 	$run_query = mysqli_query($con,$product_query);
 	if(mysqli_num_rows($run_query) > 0){

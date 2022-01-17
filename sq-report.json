@@ -11,6 +11,18 @@
       "type": "BUG",
       "engineId": "PHPCS",
       "ruleId": "Generic.Files.LineEndings.InvalidEOLChar"
+    },
+    {
+      "primaryLocation": {
+        "message": "Big Problem Here; expected",
+        "textRange": { "startColumn": 1, "startLine": 15 ,"endLine": 1,
+          "endColumn": 5},
+        "filePath": "homeaction.php"
+      },
+      "severity": "CRITICAL",
+      "type": "BUG",
+      "engineId": "PHPCS",
+      "ruleId": "Generic.Files.LineEndings.InvalidEOLChar"
     }
   ]
     
