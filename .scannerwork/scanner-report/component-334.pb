@@ -1,1 +1,0 @@
-Î 2phpXAhradmin/reg.php
