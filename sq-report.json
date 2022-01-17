@@ -15,7 +15,7 @@
     {
       "primaryLocation": {
         "message": "Big Problem Here; expected",
-        "textRange": { "startColumn": 1, "startLine": 15 ,"endLine": 1,
+        "textRange": { "startColumn": 1, "startLine": 10 ,"endLine": 1,
           "endColumn": 5},
         "filePath": "homeaction.php"
       },
