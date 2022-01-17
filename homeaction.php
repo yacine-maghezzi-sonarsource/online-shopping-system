@@ -3,6 +3,8 @@ session_start();
 $ip_add = getenv("REMOTE_ADDR");
 include "db.php";
 
+
+
 if(isset($_POST["categoryhome"])){
 	$category_query = "SELECT * FROM categories WHERE cat_id!=1";
     
