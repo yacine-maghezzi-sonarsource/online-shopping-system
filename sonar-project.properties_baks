@@ -1,0 +1,12 @@
+sonar.projectKey=OnlineShoppingPHP
+sonar.projectName=OnlineShoppingPHP
+sonar.projectVersion=1.0
+
+# Comma-separated paths to directories with sources (required)
+
+
+
+# Encoding of the source files
+sonar.sourceEncoding=UTF-8
+
+sonar.externalIssuesReportPaths=sq-report.json

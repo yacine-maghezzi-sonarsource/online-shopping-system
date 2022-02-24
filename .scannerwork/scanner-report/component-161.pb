@@ -1,1 +1,0 @@
-¡ 2phpXÆhradmin/admin/footer.php
