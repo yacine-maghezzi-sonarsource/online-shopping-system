@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 $ip_add = getenv("REMOTE_ADDR");
 include "db.php";
@@ -72,7 +71,6 @@ if(isset($_POST["getProducthome"])){
 	}
 	//TESTTESTTESTTEST3
 	#new EDIT
-	file_uploads=1 
 	$filename = $_GET["filename"];
 	include $filename . ".php";
 	$product_query = "SELECT * FROM products,categories WHERE product_cat=cat_id LIMIT $start,$limit";
