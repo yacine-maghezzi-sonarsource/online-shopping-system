@@ -1,2 +1,4 @@
 .scannerwork/
 sq-report.json
+.DS_Store
+.gitignore
