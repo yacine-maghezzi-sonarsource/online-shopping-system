@@ -61,13 +61,56 @@ if(isset($_POST["page"])){
 		";
 	}
 }
+function fun($a) {
+	$i = 10;
+	return $i + $a;
+	$i++;             // dead code
+  }
+  $url = "http://example.com"; // Sensitive
+  $url = "ftp://anonymous@example.com"; // Sensitive
+  $url = "telnet://anonymous@example.com"; // Sensitive
+  
+  $con = ftp_connect('example.com'); // Sensitive
+  
+  $trans = (new Swift_SmtpTransport('XXX', 1234)); // Sensitive
+  
+  $mailer = new PHPMailer(true); // Sensitive
+  
+  define( 'FORCE_SSL_ADMIN', false); // Sensitive
+  define( 'FORCE_SSL_LOGIN', false); // Sensitive
+function myEncrypt($cipher, $key, $data, $mode, $iv, $options, $padding, $infile, $outfile, $recipcerts, $headers, $nonce, $ad, $pub_key_ids, $env_keys)
+{
+    mcrypt_ecb ($cipher, $key, $data, $mode); // Sensitive
+    mcrypt_cfb($cipher, $key, $data, $mode, $iv); // Sensitive
+    mcrypt_cbc($cipher, $key, $data, $mode, $iv); // Sensitive
+    mcrypt_encrypt($cipher, $key, $data, $mode); // Sensitive
+
+    openssl_encrypt($data, $cipher, $key, $options, $iv); // Sensitive
+    openssl_public_encrypt($data, $crypted, $key, $padding); // Sensitive
+    openssl_pkcs7_encrypt($infile, $outfile, $recipcerts, $headers); // Sensitive
+    openssl_seal($data, $sealed_data, $env_keys, $pub_key_ids); // Sensitive
+
+    sodium_crypto_aead_aes256gcm_encrypt ($data, $ad, $nonce, $key); // Sensitive
+    sodium_crypto_aead_chacha20poly1305_encrypt ($data, $ad, $nonce, $key); // Sensitive
+    sodium_crypto_aead_chacha20poly1305_ietf_encrypt ($data, $ad, $nonce, $key); // Sensitive
+    sodium_crypto_aead_xchacha20poly1305_ietf_encrypt ($data, $ad, $nonce, $key); // Sensitive
+    sodium_crypto_box_seal ($data, $key); // Sensitive
+    sodium_crypto_box ($data, $nonce, $key); // Sensitive
+    sodium_crypto_secretbox ($data, $nonce, $key); // Sensitive
+    sodium_crypto_stream_xor ($data, $nonce, $key); // Sensitive
+}
+
+
 if(isset($_POST["getProducthome"])){
 	$limit = 3;
 	if(isset($_POST["setPage"])){
 		$pageno = $_POST["pageNumber"];
 		$start = ($pageno * $limit) - $limit;
-	}else{
+	}else if($start == 0){
 		$start = 0;
+	}
+	else{
+		$start = 1;
 	}
 	//TESTTESTTESTTEST3
 	#new EDIT
