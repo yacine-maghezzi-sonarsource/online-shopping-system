@@ -29,7 +29,7 @@
 			speed: 300,
 			dots: false,
 			arrows: true,
-			appendArrows: $nav ? $nav : false,
+			appendArrows: $nav || false,
 			responsive: [{
 	        breakpoint: 991,
 	        settings: {
@@ -59,7 +59,7 @@
 			speed: 300,
 			dots: false,
 			arrows: true,
-			appendArrows: $nav ? $nav : false,
+			appendArrows: $nav || false,
 		});
 	});
 
