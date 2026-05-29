@@ -59,7 +59,7 @@
 			speed: 300,
 			dots: false,
 			arrows: true,
-			appendArrows: $nav ? $nav : false,
+			appendArrows: $nav || false,
 		});
 	});
 
@@ -114,15 +114,15 @@
 		down = $this.find('.qty-down');
 
 		down.on('click', function () {
-			var value = parseInt($input.val()) - 1;
-			value = value < 1 ? 1 : value;
+			var value = Number.parseInt($input.val()) - 1;
+			value = Math.max(value, 1);
 			$input.val(value);
 			$input.change();
 			updatePriceSlider($this , value)
 		})
 
 		up.on('click', function () {
-			var value = parseInt($input.val()) + 1;
+			var value = Number.parseInt($input.val()) + 1;
 			$input.val(value);
 			$input.change();
 			updatePriceSlider($this , value)
