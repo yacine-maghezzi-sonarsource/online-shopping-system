@@ -22,11 +22,11 @@ $(function() {
         visa.removeClass('transparent');
         mastercard.removeClass('transparent');
 
-        if ($.payform.validateCardNumber(cardNumber.val()) == false) {
-            cardNumberField.addClass('has-error');
-        } else {
+        if ($.payform.validateCardNumber(cardNumber.val())) {
             cardNumberField.removeClass('has-error');
             cardNumberField.addClass('has-success');
+        } else {
+            cardNumberField.addClass('has-error');
         }
 
         if ($.payform.parseCardType(cardNumber.val()) == 'visa') {
