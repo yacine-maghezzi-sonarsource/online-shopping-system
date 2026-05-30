@@ -52,11 +52,11 @@ $(function() {
             alert("Wrong owner name");
         } else if (!isCardValid) {
             alert("Wrong card number");
-        } else if (!isCvvValid) {
-            alert("Wrong CVV");
-        } else {
+        } else if (isCvvValid) {
             // Everything is correct. Add your form submission code here.
             alert("Everything is correct");
+        } else {
+            alert("Wrong CVV");
         }
     });
 });
