@@ -176,9 +176,9 @@ $(document).ready(function(){
 			data	:$("#login").serialize(),
 			success	:function(data){
 				if(data == "login_success"){
-					window.location.href = "index.php";
+					globalThis.location.href = "index.php";
 				}else if(data == "cart_login"){
-					window.location.href = "cart.php";
+					globalThis.location.href = "cart.php";
 				}else{
 					$("#e_msg").html(data);
 					$(".overlay").hide();
@@ -199,7 +199,7 @@ $(document).ready(function(){
 			success : function(data){
 				$(".overlay").hide();
 				if (data == "register_success") {
-					window.location.href = "cart.php";
+					globalThis.location.href = "cart.php";
 				}else{
 					$("#signup_msg").html(data);
 				}
@@ -290,7 +290,7 @@ $(document).ready(function(){
 		var row = $(this).parent().parent();
 		var price = row.find('.price').val();
 		var qty = row.find('.qty').val();
-		if (isNaN(qty)) {
+		if (Number.isNaN(Number(qty))) {
 			qty = 1;
 		};
 		if (qty < 1) {
